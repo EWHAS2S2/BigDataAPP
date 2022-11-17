@@ -1,6 +1,6 @@
 <?php    $connect = mysqli_connect("localhost","team16" ,"team16" ,"team16" ) or die("connect fail");
                 $idx = $_GET['idx'];
-                $query = "select title, content, date, writer from board where idx=$idx";
+                $query = "select title, content, date, writer from review where idx=$idx";
                 $result = $connect->query($query);
                 $rows = mysqli_fetch_assoc($result);
  

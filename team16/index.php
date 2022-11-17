@@ -34,7 +34,7 @@
 <body>
 <?php
                 $connect = mysqli_connect('localhost', 'team16', 'team16', 'team16') or die ("connect fail");
-                $query ="select * from board order by idx desc";
+                $query ="select * from review order by idx desc";
                 $result = $connect->query($query);
                 $total = mysqli_num_rows($result);
  

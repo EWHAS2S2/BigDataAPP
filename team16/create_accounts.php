@@ -39,7 +39,7 @@
 									</header>
 
 									<!-- Content -->
-									<p>Welcome to "website"! Please enter your information to sign up.</p>
+									<p>Welcome to our web site! Please enter your information to sign up.</p>
 									<form method="post" action="user_create.php">
 										<div class="row gtr-uniform">
 											<div class="col-7 col-12-xsmall">

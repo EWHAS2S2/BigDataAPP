@@ -1,6 +1,6 @@
 <?php    $connect = mysqli_connect("localhost","team16" ,"team16" ,"team16" ) or die("connect fail");
                 $idx = $_GET['idx'];
-                $query = "delete from board where idx=$idx";
+                $query = "delete from review where idx=$idx";
                 $result = $connect->query($query);
   
                 session_start();

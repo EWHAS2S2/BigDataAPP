@@ -48,7 +48,7 @@
 										<h1>Review</h1>
 										<div class="col-6 col-12-small">
 											<ul class="actions stacked" align="right">
-												<li><a href="review_write.html" class="button">write</a></li>
+												<li><a href="write.php" class="button">write</a></li>
 											</ul>
 										</div>
 									</header>
@@ -82,8 +82,10 @@
 
                                             while( $row = mysqli_fetch_array( $result ) ) {
                                                 echo '<div class="box">
-                                                        <h2>'. $row['review_title'].'</h2>
-                                                        <h3>'. $row['movie_name'].'</h3>
+                                                        <a href="view.php?idx='.$row['idx'].'">
+                                                        <h2>'. $row['title'].'</h2>
+                                                        <h3>'. $row['movietitle'].'</h3>
+                                                        </a>
                                                         <p>'. $row['content'].'</p>
                                                     </div>' ;
                                             }
@@ -101,7 +103,9 @@
 											</div>';
                                         ?>
 
+
 										</div>
+
 
 								</section>
 
