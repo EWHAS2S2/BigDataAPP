@@ -79,18 +79,20 @@
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
-									<ul>
-										<li><a href="SearchMovieTitle.php">Homepage</a></li>
-										<li><a href="avg_grouping.php">avg_grouping</a></li>
-							
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												
-											</ul>
-										</li>
-									</ul>
+                                    <ul>
+                                        <li><a href="MovieTotal.php">Homepage</a></li>
+                                        <li><a href="avg_grouping.php">avg_grouping</a></li>
+                                        <li><a href="review_list.php">Review</a></li>
+                                        <li><a href="rankingpage.php">Ranking</a></li>
+                                        <li>
+                                            <span class="opener">Account</span>
+                                            <ul>
+                                                <li><a href="create_accounts.php">Create</a></li>
+                                                <li><a href="update_accounts.php">Edit</a></li>
+                                                <li><a href="delete_accounts.php">Delete</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
 								</nav>
 
 

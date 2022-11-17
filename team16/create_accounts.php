@@ -22,14 +22,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
+                                    <a href="MovieTotal.php" class="logo"><strong>Movies App</strong> by S2S2.</a>
 								</header>
 
 							<!-- Content -->
@@ -77,6 +70,31 @@
 
 						</div>
 					</div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="MovieTotal.php">Homepage</a></li>
+                        <li><a href="avg_grouping.php">avg_grouping</a></li>
+                        <li><a href="review_list.php">Review</a></li>
+                        <li><a href="rankingpage.php">Ranking</a></li>
+                        <li>
+                            <span class="opener">Account</span>
+                            <ul>
+                                <li><a href="create_accounts.php">Create</a></li>
+                                <li><a href="update_accounts.php">Edit</a></li>
+                                <li><a href="delete_accounts.php">Delete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
 
 				
 						</div>
