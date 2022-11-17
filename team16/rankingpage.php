@@ -24,14 +24,14 @@ if ($conn->connect_error) {
   die("접속 실패: " . $conn->connect_error);
 }
 
-$sql = "SELECT movie_id, title, release_date, RANK() OVER (ORDER BY vote_average DESC) AS ranking
+$sql = "SELECT title, vote_average, RANK() OVER (ORDER BY vote_average DESC) AS ranking
 FROM movie_recommend limit 30";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // 순서대로 출력
   while($row = $result->fetch_assoc()) {
-    echo $row["ranking"]. " : ". $row["movie_id"]. " ". $row["title"]. " ". $row["release_date"]."<br>";
+    echo $row["ranking"]. " : ". $row["vote_average"]. " ". $row["title"]."<br>";
   }
 } else {
   echo "데이터가 없습니다.";
@@ -58,14 +58,14 @@ if ($conn->connect_error) {
   die("접속 실패: " . $conn->connect_error);
 }
 
-$sql = "SELECT movie_id, title, release_date, RANK() OVER (ORDER BY popularity DESC) AS ranking
+$sql = "SELECT title, popularity, RANK() OVER (ORDER BY popularity DESC) AS ranking
 FROM movie_recommend limit 30";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // 순서대로 출력
   while($row = $result->fetch_assoc()) {
-    echo $row["ranking"]. " : ". $row["movie_id"]. " ". $row["title"]. " ". $row["release_date"]."<br>";
+    echo $row["ranking"]. " : ". $row["popularity"]. " ". $row["title"]."<br>";
   }
 } else {
   echo "데이터가 없습니다.";
