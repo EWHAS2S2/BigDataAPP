@@ -58,7 +58,7 @@
             echo "<br>"."average revenue".$one['AVG2']."<br><br>";    
             
 
-            $sql = "SELECT title, budget, revenue FROM movie_budget GROUP BY budget, revenue HAVING budget > 'AVG1' and revenue > 'AVG2' "; // 쿼리
+            $sql = "SELECT title, budget, revenue FROM movie_budget GROUP BY budget, revenue HAVING budget > 29159443.6689 and revenue > 82516572.6290 "; // 쿼리
             $result = mysqli_query($connect, $sql); // 쿼리 실행
 
                 while ($row = mysqli_fetch_assoc($result)) { // 집합에서 하나씩 레코드를 꺼내 연관배열로 저장

@@ -82,7 +82,7 @@
 									</header>
 									<ul>
 										<li><a href="MovieTotal.php">Homepage</a></li>
-										<li><a href="vote_avg.php">vote_avg</a></li>
+										<li><a href="avg_grouping.php">avg_grouping</a></li>
 							
 										<li>
 											<span class="opener">Submenu</span>
