@@ -47,17 +47,22 @@
                 }
 
             
-            $sql = "SELECT avg(vote_average) AS AVG FROM movie_recommend"; // 쿼리
+            $sql = "SELECT avg(budget) AS AVG1 FROM movie_budget"; // 쿼리
             $result = mysqli_query($connect, $sql); // 쿼리 실행
             $one = mysqli_fetch_array($result);
-            echo "<br>".$one['AVG']."<br>";    
+            echo "<br>"."average budget".$one['AVG1']."<br>";    
+            
+            $sql = "SELECT avg(revenue) AS AVG2 FROM movie_budget"; // 쿼리
+            $result = mysqli_query($connect, $sql); // 쿼리 실행
+            $one = mysqli_fetch_array($result);
+            echo "<br>"."average revenue".$one['AVG2']."<br><br>";    
             
 
-            $sql = "SELECT connect_genre.title , genre.genre_name FROM connect_genre LEFT JOIN genre ON connect_genre.genre_id = genre.genre_id WHERE genre.genre_id='Fantasy'"; // 쿼리
+            $sql = "SELECT title, budget, revenue FROM movie_budget GROUP BY budget, revenue HAVING budget > 'AVG1' and revenue > 'AVG2' "; // 쿼리
             $result = mysqli_query($connect, $sql); // 쿼리 실행
 
                 while ($row = mysqli_fetch_assoc($result)) { // 집합에서 하나씩 레코드를 꺼내 연관배열로 저장
-                    echo $row['connect_genre.title']." : ".$row['genre.genre_name']."<br>"; // 연관배열 인덱스 접근
+                    echo $row['title']." : ".$row['budget']." ".$row['revenue']."<br>"; // 연관배열 인덱스 접근
                 }
             
             
