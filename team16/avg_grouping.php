@@ -82,7 +82,7 @@
             echo "<br>"."average revenue : ".$one['AVG2']."<br><br>";    
             
 
-            $sql = "SELECT title, budget, revenue FROM movie_budget GROUP BY budget, revenue HAVING budget > 29159443.6689 and revenue > 82516572.6290 "; // 쿼리
+            $sql = "SELECT title, budget, revenue FROM movie_budget GROUP BY budget, revenue HAVING budget > (select avg(budget) from movie_budget) and revenue > (select avg(revenue) from movie_budget) "; // 쿼리
             $result = mysqli_query($connect, $sql); // 쿼리 실행
             echo " movies whose revenue and budget is higher than average <br>";
                 while ($row = mysqli_fetch_assoc($result)) { // 집합에서 하나씩 레코드를 꺼내 연관배열로 저장
